@@ -1,6 +1,6 @@
 name: Actions workflow
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   run-github-actions:
@@ -20,4 +20,11 @@ jobs:
         run: |
           pwd
           ls -a
+#      - name: Simple JS action
+#        id: greet
+#        uses: actions/hello-world-javascript-action@v1
+#        with:
+#          who-to-greet: Shobhit
+#      - name: Log greeting time
+#        run: echo "${{ steps.greet.outputs.time }}"
 
