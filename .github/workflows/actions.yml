@@ -6,10 +6,14 @@ jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
-      - name: Simple JS action
-        id: greet
-        uses: actions/hello-world-javascript-action@v1
-        with:
-          who-to-greet: Shobhit
-      - name: Log greeting time
-        run: echo "${{ steps.greet.outputs.time }}"
+      - name: List files
+        run: |
+          pwd
+          ls -a
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: List After Checkout
+        run: |
+          pwd
+          ls -a
+
